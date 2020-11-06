@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "short_name": "KauBoard",
+  "name": "카우보드",
+  "description": "Chrome Dashboard for KAU Members",
+  "icons": {
+    "16": "logo192.png",
+    "48":  "logo192.png",
+    "128": "logo192.png"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-N/u27ig/pI4rYsTzFChTylevSCXKDw/JQIPYm1Z1npI='; object-src 'self'",
+  "permissions": [
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}
