@@ -1,3 +1,12 @@
-.clock {
-  color: red;
+.Clock {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.Clock__date {
+  font-size: 1.4rem;
+}
+
+.Clock__time {
+  font-size: 1.2rem;
 }

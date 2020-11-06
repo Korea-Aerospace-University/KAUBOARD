@@ -6,8 +6,12 @@ import "./Main.scss";
 function Main() {
   return (
     <div className="Main">
-      <div>메인 부분</div>
-      <Clock></Clock>
+      <div className="Main__slogan">
+        <div className="Main__slogan__1">하늘을 향한 꿈, 열정, 도전</div>
+        <div className="Main__slogan__2">
+          한국항공대학교가 당신의 오늘을 응원합니다.
+        </div>
+      </div>
       <Links></Links>
     </div>
   );
