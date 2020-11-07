@@ -17,14 +17,14 @@
   position: relative;
   margin: 10px 0;
   border-bottom: 5px solid #40368a;
-  animation: grow 2s forwards;
+  animation: grow 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .Main__slogan__2 {
   opacity: 0;
   font-size: 1.4rem;
   text-align: right;
-  animation: 2s fadeIn 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: 2s fadeIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 @keyframes grow {
