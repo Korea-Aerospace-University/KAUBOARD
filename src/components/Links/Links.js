@@ -40,7 +40,7 @@ function Links() {
         </a>
         <a href="https://scm.kau.ac.kr/">
           <li className="Links__content">
-            <img src="./manage.png" alt="역량관리시스템" width="50" />
+            <img src="./manage.png" alt="역량관리시스템" width="48" />
             <div>역량관리시스템</div>
           </li>
         </a>
@@ -51,6 +51,7 @@ function Links() {
           </li>
         </a>
       </ul>
+      <div className="Links__borderLine"></div>
     </div>
   );
 }
