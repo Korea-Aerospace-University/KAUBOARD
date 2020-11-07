@@ -1,0 +1,29 @@
+.Links {
+  margin-top: 2rem;
+}
+
+.Links__line1 {
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.Links__line2 {
+  text-align: center;
+}
+.Links__content {
+  display: inline-block;
+  margin: 0px 2rem;
+  text-align: center;
+
+  div {
+    color: black;
+    margin: 7px;
+    font-size: 0.95rem;
+  }
+}
+
+.Links__content:hover {
+  cursor: pointer;
+  transition: 100ms ease-in;
+  transform: scale(1.1);
+}
