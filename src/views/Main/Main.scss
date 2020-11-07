@@ -13,12 +13,27 @@
   animation: 1.5s fadeIn ease-in;
 }
 
+.Slogan__borderLine {
+  position: relative;
+  margin: 10px 0;
+  border-bottom: 5px solid #40368a;
+  animation: grow 2s forwards;
+}
+
 .Main__slogan__2 {
   opacity: 0;
   font-size: 1.4rem;
   text-align: right;
-  animation: 1.5s fadeIn 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-  animation-fill-mode: forwards;
+  animation: 2s fadeIn 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+@keyframes grow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes fadeIn {

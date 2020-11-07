@@ -2,6 +2,7 @@ import React from "react";
 import GeneralNotice from "../../components/GeneralNotice/GeneralNotice";
 import MealMenu from "../../components/MealMenu/MealMenu";
 import SchoolNotice from "../../components/SchoolNotice/SchoolNotice";
+import Weather from "../../components/Weather/Weather";
 import "./Top.scss";
 
 function Top() {
@@ -13,7 +14,7 @@ function Top() {
       </div>
       <MealMenu></MealMenu>
       상단 부분
-      <div className="weather">날씨</div>
+      <Weather />
     </div>
   );
 }
