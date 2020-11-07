@@ -5,14 +5,42 @@
 }
 
 .Main__slogan {
-  line-height: 4rem;
+  line-height: 3.7rem;
 }
 
 .Main__slogan__1 {
   font-size: 2.8rem;
+  animation: 1.5s fadeIn ease-in;
+}
+
+.Slogan__borderLine {
+  position: relative;
+  margin: 10px 0;
+  border-bottom: 5px solid #40368a;
+  animation: grow 2s forwards;
 }
 
 .Main__slogan__2 {
+  opacity: 0;
   font-size: 1.4rem;
   text-align: right;
+  animation: 2s fadeIn 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+@keyframes grow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
