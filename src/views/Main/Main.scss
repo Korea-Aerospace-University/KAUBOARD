@@ -5,14 +5,27 @@
 }
 
 .Main__slogan {
-  line-height: 4rem;
+  line-height: 3.7rem;
 }
 
 .Main__slogan__1 {
   font-size: 2.8rem;
+  animation: 1.5s fadeIn ease-in;
 }
 
 .Main__slogan__2 {
+  opacity: 0;
   font-size: 1.4rem;
   text-align: right;
+  animation: 1.5s fadeIn 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
