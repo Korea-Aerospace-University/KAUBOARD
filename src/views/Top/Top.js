@@ -1,4 +1,5 @@
 import React from "react";
+import Clock from "../../components/Clock/Clock";
 import GeneralNotice from "../../components/GeneralNotice/GeneralNotice";
 import MealMenu from "../../components/MealMenu/MealMenu";
 import SchoolNotice from "../../components/SchoolNotice/SchoolNotice";
@@ -12,8 +13,7 @@ function Top() {
         <GeneralNotice></GeneralNotice>
         <SchoolNotice></SchoolNotice>
       </div>
-      <MealMenu></MealMenu>
-      상단 부분
+      <Clock></Clock>
       <Weather />
     </div>
   );

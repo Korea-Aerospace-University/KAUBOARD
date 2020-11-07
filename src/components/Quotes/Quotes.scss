@@ -1,0 +1,23 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.Quotes {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.Quotes__quote {
+  @font-face {
+    font-family: "IBMPlexSansKR-ExtraLight";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-ExtraLight.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+.Quotes__speaker {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  text-align: right;
+}
