@@ -2,13 +2,13 @@
   box-sizing: border-box;
   color: #3f3f3f;
   font-weight: 800;
-  border: 7px solid #cdcdcd;
+  border: 7px solid #4d4d4d;
   display: grid;
   grid-template-areas:
     "header header header"
     "icon temp perception";
   grid-gap: 10px;
-  background-color: #81a3dd;
+  background-color: #a3b4ee;
   margin: 10px;
   padding: 10px 10px;
   padding-bottom: 0;
@@ -22,6 +22,7 @@
 }
 
 .Weather__title {
+  font-size: 16px;
   grid-area: header;
   text-align: center;
 }
@@ -31,11 +32,13 @@
 }
 
 .Weather__temp {
+  font-size: 14px;
   grid-area: temp;
   text-align: center;
 }
 
 .Weather__perception {
+  font-size: 14px;
   grid-area: perception;
   text-align: center;
 }
