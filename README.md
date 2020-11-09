@@ -6,25 +6,23 @@
 <!-- TABLE OF CONTENTS -->
 ## 목차
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [프로젝트 설명](#프로젝트-설명)
+  * [사용 기술](#사용-기술)
+  * [기여 준비사항](#기여-준비사항)
+* [프로젝트 실행](#프로젝트-실행)
+* [프로젝트 로드맵](#프로젝트-로드맵)
+* [기여 방법](#기여-방법)
+* [기여자 목록](#기여자-목록)
+* [프로젝트 저장소](#프로젝트-저장소-링크)
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 프로젝트 설명
 
 이 프로젝트는 한국항공대 학생들을 위한 다양한 편의기능이 내장된 크롬 익스텐션을 제작하는 것이 목표입니다.
 
-### Built With
+### 사용 기술
 이 프로젝트는 `React.js` 라이브러리를 통해 제작되었으며, API 서버는 `Node.js`와 `express` 프레임워크를 사용해 제작할 예정입니다. 또한 '새 탭에 페이지 덮어쓰기' 기능 및 테스트를 위해 크롬 익스텐션 개발 API를 활용합니다.
 
 * [React.js](https://reactjs.org/)
@@ -32,7 +30,7 @@
 * [Chrome Development API](https://developer.chrome.com/extensions/devguide)
 
 
-### Prerequisites
+### 기여 준비사항
 
 프로젝트 테스트 및 기여를 위한 소프트웨어를 기술합니다.
 
@@ -42,7 +40,7 @@
 * Chrome Browser
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 프로젝트 실행
 
 프로젝트를 로컬 환경에서 테스트하기 위한 방법을 기술합니다. (익스텐션 테스트방법 추가 예정)
 
@@ -67,7 +65,7 @@ npm build
 ```
 
 <!-- ROADMAP -->
-## Roadmap
+## 프로젝트 로드맵
 
 앞으로 개발할 기능들에 대한 내용을 기술합니다. (추가 예정)
 
@@ -82,15 +80,19 @@ npm build
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## 기여 방법
 
-프로젝트에 기여할 수 있는 방법에 대해 기술합니다. (추가 예정)
+프로젝트에 기여할 수 있는 방법에 대해 기술합니다. (추가 예정)  
+[기여자 슬랙 채널 링크](blackkau.slack.com)
 
 
 <!-- CONTACT -->
-## Contact
+## 기여자 목록
 
-Your Name - [@c17an](https://github.com/C17AN)
+- [@c17an](https://github.com/C17AN)
+- [@bullgom](https://github.com/bullgom)
+
+## 프로젝트 저장소 링크
 
 Project Link: [https://github.com/Korea-Aerospace-University/KAUBOARD](https://github.com/Korea-Aerospace-University/KAUBOARD)
 
