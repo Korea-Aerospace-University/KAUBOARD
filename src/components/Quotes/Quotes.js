@@ -9,7 +9,7 @@ function Quotes() {
   const [quoteIdx, setQuoteIdx] = useState(0);
   const data = [
     { quote: "삶이 있는 한 희망은 있다.", speaker: "키케로" },
-    { quote: "산다는 것, 그것은 치열한 전투이다.", speaker: "로망로랑" },
+    { quote: "산다는 것, 그것은 치열한 전투이다.", speaker: "로맹 로랑" },
     {
       quote: "하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다. ",
       speaker: "사무엘 존슨",
@@ -173,11 +173,6 @@ function Quotes() {
     {
       quote: "당신이 할수 있다고 믿든 할수 없다고 믿든 믿는 대로 될 것이다.",
       speaker: "헨리 포드",
-    },
-    {
-      quote:
-        "당신이 인생의 주인공이라는 사실을 잊지 마라. 지금까지 만들어온 의식적 그리고 무의식적 선택으로 인해 지금의 당신이 있는 것이다.",
-      speaker: "바바라 홀",
     },
     {
       quote: "작은 기회로부터 종종 위대한 업적이 시작된다.",
