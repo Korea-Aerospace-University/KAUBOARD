@@ -11,6 +11,7 @@
   },
   "content_security_policy": "script-src 'self' 'sha256-N/u27ig/pI4rYsTzFChTylevSCXKDw/JQIPYm1Z1npI='; object-src 'self'",
   "permissions": [
+    "https://calm-mesa-43659.herokuapp.com/*",
     "storage"
   ],
   "chrome_url_overrides" : {
