@@ -5,7 +5,24 @@
 }
 
 .Main__slogan {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 12px;
   line-height: 3.7rem;
+}
+
+.Main__slogan::after {
+  content: "";
+  position: absolute;
+  border-radius: 12px;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #efefef;
+  opacity: 0.88;
 }
 
 .Main__slogan__1 {

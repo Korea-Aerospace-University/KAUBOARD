@@ -13,7 +13,6 @@ function Main() {
           한국항공대학교가 당신의 오늘을 응원합니다.
         </div>
       </div>
-      <Links></Links>
     </div>
   );
 }
