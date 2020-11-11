@@ -14,7 +14,6 @@ function Top() {
         <SchoolNotice></SchoolNotice>
       </div>
       <Clock></Clock>
-      <Weather />
     </div>
   );
 }

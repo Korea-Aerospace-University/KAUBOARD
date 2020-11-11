@@ -1,10 +1,14 @@
+.IconLink {
+  width: 120px;
+  text-align: center;
+}
+
 .IconLink__content {
   display: inline-block;
-  margin: 0px 2rem;
   text-align: center;
 
   div {
-    color: black;
+    color: #cdcdcd;
     margin: 7px;
     font-size: 0.95rem;
   }
