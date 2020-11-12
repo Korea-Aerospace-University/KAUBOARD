@@ -10,8 +10,8 @@ function Footer() {
   return (
     <div className="Footer">
       <Links></Links>
-      <Quotes></Quotes>
       <Suggestion></Suggestion>
+      <Quotes />
     </div>
   );
 }
