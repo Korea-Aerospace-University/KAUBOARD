@@ -23,18 +23,23 @@ function Weather() {
   return (
     <div className="Weather">
       <div className="Weather__title">고양시 화전동</div>
+      <div className="Weather__styleLine"></div>
       <section className="Weather__icon">
         <img src={currentIcon} alt="weather" width="70"></img>
       </section>
       <section className="Weather__temp">
         <div>기온</div>
-        <span style={{ display: "inline-block", marginTop: "8px" }}>
+        <span
+          style={{ display: "inline-block", marginTop: "8px", width: "4rem" }}
+        >
           {parseFloat(currentTemp).toFixed(1)}°C
         </span>
       </section>
       <section className="Weather__perception">
         <div>체감온도</div>
-        <span style={{ display: "inline-block", marginTop: "8px" }}>
+        <span
+          style={{ display: "inline-block", marginTop: "8px", width: "4rem" }}
+        >
           {parseFloat(perceptionTemp).toFixed(1)}°C
         </span>
       </section>
