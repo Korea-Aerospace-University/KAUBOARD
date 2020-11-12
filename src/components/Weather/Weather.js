@@ -30,7 +30,7 @@ function Weather() {
       <section className="Weather__temp">
         <div>기온</div>
         <span
-          style={{ display: "inline-block", marginTop: "8px", width: "4rem" }}
+          style={{ display: "inline-block", marginTop: "8px", width: "4rem", fontFamily: 'Noto Sans KR', fontWeight: "400" }}
         >
           {parseFloat(currentTemp).toFixed(1)}°C
         </span>
@@ -38,7 +38,7 @@ function Weather() {
       <section className="Weather__perception">
         <div>체감온도</div>
         <span
-          style={{ display: "inline-block", marginTop: "8px", width: "4rem" }}
+          style={{ display: "inline-block", marginTop: "8px", width: "4rem", fontFamily: 'Noto Sans KR', fontWeight: "400" }}
         >
           {parseFloat(perceptionTemp).toFixed(1)}°C
         </span>
