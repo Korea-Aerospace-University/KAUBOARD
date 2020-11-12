@@ -11,7 +11,6 @@ function Footer() {
     <div className="Footer">
       <Links></Links>
       <Suggestion></Suggestion>
-      <Quotes />
     </div>
   );
 }
