@@ -9,11 +9,11 @@ function App() {
   const [backgroundIndex, setBackgroundIndex] = useState(1);
   useEffect(() => {
     let id = setInterval(() => {
-      setBackgroundIndex(Math.floor((Math.random() * 100) % 17));
+      setBackgroundIndex(Math.floor((Math.random() * 100) % 16) + 1);
       return clearInterval(id);
     }, 5000);
   }, [backgroundIndex]);
-
+  console.log(backgroundIndex);
   const styles = {
     background: {
       backgroundImage: `url(./background${backgroundIndex}.jpg)`,
