@@ -6,13 +6,10 @@ import "./App.scss";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [backgroundIndex, setBackgroundIndex] = useState(1);
+  const [backgroundIndex, setBackgroundIndex] = useState(0);
   useEffect(() => {
-    let id = setInterval(() => {
       setBackgroundIndex(Math.floor((Math.random() * 100) % 16) + 1);
-      return clearInterval(id);
-    }, 5000);
-  }, [backgroundIndex]);
+  }, []);
   console.log(backgroundIndex);
   const styles = {
     background: {
