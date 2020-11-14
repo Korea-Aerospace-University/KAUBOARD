@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "../../components/Clock/Clock";
 import Links from "../../components/Links/Links";
+import Notice from "../../components/Notice/Notice";
 import Quotes from "../../components/Quotes/Quotes";
 import Weather from "../../components/Weather/Weather";
 import "./Main.scss";
@@ -17,7 +18,9 @@ function Main() {
         </article>
         <article className="Main__container__lower">
           <section className="Main__event">학사일정</section>
-          <section className="Main__quote"></section>
+          <section className="Main__notice">
+            <Notice></Notice>
+          </section>
         </article>
       </div>
       {/* <div className="Main__slogan">

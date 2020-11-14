@@ -1,0 +1,24 @@
+.Notice {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.Notice__border {
+  width: 100%;
+  margin: 0.6rem 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.Notice__container {
+  margin: 8px 0;
+  article {
+    font-size: 0.9rem;
+    margin: 12px 0;
+
+    max-width: 25ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
