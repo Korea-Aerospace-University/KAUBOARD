@@ -5,7 +5,12 @@ function Notice() {
   return (
     <div className="Notice">
       <nav className="Notice__general">
-        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>일반공지</div>
+        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>
+          일반공지{"  "}
+          <span style={{ fontSize: "0.8rem", fontWeight: 400 }}>
+            General Notice
+          </span>
+        </div>
         <div className="Notice__border"></div>
         <div className="Notice__container">
           <article>
@@ -19,7 +24,12 @@ function Notice() {
         </div>
       </nav>
       <nav className="Notice__academy">
-        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>학사공지</div>
+        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>
+          학사공지{"  "}
+          <span style={{ fontSize: "0.8rem", fontWeight: 400 }}>
+            Academic Notice
+          </span>
+        </div>
         <div className="Notice__border"></div>
         <div className="Notice__container">
           <article>2020학년도 동계 계절학기 실시 안내</article>
