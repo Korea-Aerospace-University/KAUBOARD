@@ -30,7 +30,7 @@ function Weather() {
         {isLoading ? (
           <img src="./loading.svg" />
         ) : (
-          <img src={currentIcon} alt="weather" width="70"></img>
+          <img src={currentIcon} alt="weather" width="60"></img>
         )}
       </section>
       <section className="Weather__temp">
