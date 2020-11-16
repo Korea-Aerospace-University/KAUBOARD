@@ -4,8 +4,78 @@
   justify-content: center;
 }
 
+.Main__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Main__container__upper {
+  display: flex;
+  opacity: 0;
+  .Main__dday {
+    width: 560px;
+    height: 180px;
+    background-color: white;
+    margin: 16px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+  .Main__weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 180px;
+    background-color: #40368a;
+    margin: 16px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+  animation: fadeIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.Main__container__lower {
+  display: flex;
+  opacity: 0;
+  .Main__event {
+    width: 240px;
+    height: 190px;
+    background-color: #40368a;
+    margin: 16px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+  .Main__notice {
+    width: 560px;
+    height: 190px;
+    background-color: white;
+    margin: 16px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  }
+  animation: fadeIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  float: right;
+}
+
 .Main__slogan {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  border-radius: 12px;
   line-height: 3.7rem;
+}
+
+.Main__slogan::after {
+  content: "";
+  position: absolute;
+  border-radius: 12px;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #efefef;
+  opacity: 0.92;
 }
 
 .Main__slogan__1 {
@@ -38,9 +108,11 @@
 
 @keyframes fadeIn {
   from {
+    width: 0px;
     opacity: 0;
   }
   to {
-    opacity: 1;
+    width: 100%;
+    opacity: 0.9;
   }
 }

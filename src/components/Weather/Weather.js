@@ -7,6 +7,7 @@ function Weather() {
   const [perceptionTemp, setPerceptionTemp] = useState("");
   const [weeklyIcon, setWeeklyIcon] = useState([]);
   const [weeklyTemp, setWeeklyTemp] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://calm-mesa-43659.herokuapp.com/weather")
@@ -18,24 +19,48 @@ function Weather() {
         setPerceptionTemp(data.perceptionTemp);
         setWeeklyIcon(data.weeklyIcon);
         setWeeklyTemp(data.weeklyTemp);
+        setIsLoading(false);
       });
   }, []);
   return (
     <div className="Weather">
       <div className="Weather__title">고양시 화전동</div>
+      <div className="Weather__styleLine"></div>
       <section className="Weather__icon">
-        <img src={currentIcon} alt="weather" width="70"></img>
+        {isLoading ? (
+          <img src="./loading.svg" />
+        ) : (
+          <img src={currentIcon} alt="weather" width="60"></img>
+        )}
       </section>
       <section className="Weather__temp">
         <div>기온</div>
-        <span style={{ display: "inline-block", marginTop: "8px" }}>
-          {parseFloat(currentTemp).toFixed(1)}°C
+        <span
+          style={{
+            display: "inline-block",
+            marginTop: "8px",
+            width: "4rem",
+            fontFamily: "Noto Sans KR",
+            fontWeight: "400",
+          }}
+        >
+          {isLoading ? "로딩 중..." : `${parseFloat(currentTemp).toFixed(1)}°C`}
         </span>
       </section>
       <section className="Weather__perception">
         <div>체감온도</div>
-        <span style={{ display: "inline-block", marginTop: "8px" }}>
-          {parseFloat(perceptionTemp).toFixed(1)}°C
+        <span
+          style={{
+            display: "inline-block",
+            marginTop: "8px",
+            width: "4rem",
+            fontFamily: "Noto Sans KR",
+            fontWeight: "400",
+          }}
+        >
+          {isLoading
+            ? "로딩 중..."
+            : `${parseFloat(perceptionTemp).toFixed(1)}°C`}
         </span>
       </section>
     </div>

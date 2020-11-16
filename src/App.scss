@@ -1,4 +1,5 @@
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css"); 
 
 * {
   margin: 0px;
@@ -10,6 +11,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
   height: 100vh;
 }
 
