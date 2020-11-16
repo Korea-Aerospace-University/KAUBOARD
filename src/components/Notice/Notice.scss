@@ -21,4 +21,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .article__new:before {
+    content: "· ";
+    color: red;
+  }
 }
