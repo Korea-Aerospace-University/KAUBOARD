@@ -10,6 +10,14 @@
   border-bottom: 1px solid #cdcdcd;
 }
 
+.Notice__general {
+  width: 40%;
+}
+
+.Notice__academy {
+  width: 40%;
+}
+
 .Notice__container {
   margin: 8px 0;
   article {
@@ -20,6 +28,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  article {
+    cursor: pointer;
+  }
+  article:hover {
+    transition: 50ms ease-in;
+    color: #40368a;
+    font-weight: 800;
   }
   .article__new:before {
     content: "· ";
