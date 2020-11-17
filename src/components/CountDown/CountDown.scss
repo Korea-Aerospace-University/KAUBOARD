@@ -5,17 +5,17 @@
   justify-content: center;
   align-items: center;
   margin: 10px auto;
-  padding-bottom: 20px;
   width: 100%;
   animation: CountDownfadeIn 1s 0.5s forwards;
 }
 
 .Countdown__title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
   text-align: center;
+  animation: flutter 1s infinite;
 }
 
 .Countdown-col {
@@ -41,5 +41,17 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes flutter {
+  0% {
+    transform: rotatez(1.3deg);
+  }
+  50% {
+    transform: rotatez(-1.3deg);
+  }
+  100% {
+    transform: rotatez(1.3deg);
   }
 }

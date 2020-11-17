@@ -33,7 +33,7 @@ class Countdown extends Component {
 
     const timeLeft = {
       years: 0,
-      days: 10,
+      days: 0,
       hours: 0,
       min: 0,
       sec: 0,
@@ -82,7 +82,7 @@ class Countdown extends Component {
 
     return (
       <div className="Countdown">
-        <div className="Countdown__title">종강까지 남은 시간</div>
+        <div className="Countdown__title">종강까지 남은 시간 ⏱</div>
         <div className="Countdown-timer">
           <strong style={{ fontSize: "3rem" }}>[</strong>
           <span className="Countdown-col">
@@ -91,7 +91,7 @@ class Countdown extends Component {
               <span>{"Days"}</span>
             </span>
           </span>
-          <span style={{ fontSize: "3rem" }}>:</span>
+          <span style={{ fontSize: "3rem" }}>/</span>
           <span className="Countdown-col">
             <span className="Countdown-col-element">
               <strong>{this.addLeadingZeros(countDown.hours)}</strong>
