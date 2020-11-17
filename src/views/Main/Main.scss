@@ -13,6 +13,9 @@
   display: flex;
   opacity: 0;
   .Main__dday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 560px;
     height: 180px;
     background-color: white;

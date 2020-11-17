@@ -1,5 +1,6 @@
 import React from "react";
 import Clock from "../../components/Clock/Clock";
+import CountDown from "../../components/CountDown/CountDown";
 import Links from "../../components/Links/Links";
 import Notice from "../../components/Notice/Notice";
 import Quotes from "../../components/Quotes/Quotes";
@@ -11,7 +12,9 @@ function Main() {
     <div className="Main">
       <div className="Main__container">
         <article className="Main__container__upper">
-          <section className="Main__dday">디데이</section>
+          <section className="Main__dday">
+            <CountDown date={`${2020}-12-24T00:00:00`}></CountDown>
+          </section>
           <section className="Main__weather">
             <Weather />
           </section>

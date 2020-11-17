@@ -1,0 +1,45 @@
+.Countdown {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  width: 100%;
+  animation: CountDownfadeIn 1s 0.5s forwards;
+}
+
+.Countdown__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.Countdown-col {
+  display: inline-block;
+  text-align: center;
+}
+
+.Countdown-col-element {
+  display: inline-block;
+  display: flex;
+  margin: 0 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Countdown-col-element strong {
+  font-size: 3rem;
+}
+
+@keyframes CountDownfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
