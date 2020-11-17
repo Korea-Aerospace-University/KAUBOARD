@@ -1,7 +1,9 @@
 .Notice {
+  opacity: 0;
   display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
+  animation: NotifadeIn 1s 0.3s forwards;
 }
 
 .Notice__border {
@@ -40,5 +42,14 @@
   .article__new:before {
     content: "· ";
     color: red;
+  }
+}
+
+@keyframes NotifadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
