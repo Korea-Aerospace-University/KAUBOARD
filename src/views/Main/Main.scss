@@ -40,7 +40,10 @@
 .Main__container__lower {
   display: flex;
   opacity: 0;
-  .Main__event {
+  .Main__schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 240px;
     height: 190px;
     background-color: #40368a;
