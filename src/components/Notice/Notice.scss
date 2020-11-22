@@ -25,7 +25,6 @@
   article {
     font-size: 0.9rem;
     margin: 12px 0;
-
     max-width: 25ch;
     white-space: nowrap;
     overflow: hidden;
@@ -33,10 +32,16 @@
   }
   article {
     cursor: pointer;
+    > a {
+      text-decoration: none;
+      color: black;
+    }
+    > a:hover {
+      color: #40368a;
+    }
   }
   article:hover {
-    transition: 50ms ease-in;
-    color: #40368a;
+    transition: 80ms ease-in;
     font-weight: 800;
   }
   .article__new:before {
