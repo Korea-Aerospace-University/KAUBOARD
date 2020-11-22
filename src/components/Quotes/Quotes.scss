@@ -1,27 +1,24 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
 .Quotes {
-  position: absolute;
-  z-index: 1;
-  bottom: 20px;
-  right: 20px;
-  font-size: 0.8rem;
-  font-weight: 400;
-  border: 4px solid #232323;
+  opacity: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  padding: 0 1rem;
+  height: 85%;
   border-radius: 8px;
-  padding: 1rem;
+  line-height: 1.5rem;
+  animation: QuotesFadeIn 1s 0.7s forwards;
 }
 
-.Quotes::after {
-  position: absolute;
-  opacity: 0.88;
-  z-index: -1;
-  content: "";
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: white;
+.Quotes__borderLine {
+  width: 80%;
+  border-bottom: 1px solid #cdcdcd;
+  margin: 0.5rem;
 }
 
 .Quotes__quote {
@@ -32,10 +29,22 @@
     font-weight: normal;
     font-style: normal;
   }
+  font-size: 0.8rem;
 }
 
 .Quotes__speaker {
   font-size: 0.7rem;
-  margin-top: 1rem;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
   text-align: right;
+}
+
+@keyframes QuotesFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
