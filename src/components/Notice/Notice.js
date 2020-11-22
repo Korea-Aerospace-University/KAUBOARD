@@ -16,9 +16,9 @@ function Notice() {
   const [isLoading, setIsLoading] = useState(true);
 
   const isNewItem = (item) => {
-    console.log(new Date(item.date).getDate(), new Date().getDate());
     if (
-      new Date(item.date).getDate() === new Date().getDate() &&
+      (new Date(item.date).getDate() === new Date().getDate() ||
+        new Date(item.date).getDate() === new Date().getDate() - 1) &&
       new Date(item.date).getMonth() === new Date().getMonth()
     ) {
       return "new";
@@ -40,9 +40,13 @@ function Notice() {
         <div className="Notice__container">
           {isLoading
             ? "로딩 중..."
-            : generalNotiList.map((item) => (
-                <article className={`article__${isNewItem(item)}`}>
-                  {item.content}
+            : generalNotiList.map((item, idx) => (
+                <article key={idx} className={`article__${isNewItem(item)}`}>
+                  <a
+                    href={"http://www.kau.ac.kr/page/kauspace/general_list.jsp"}
+                  >
+                    {item.content}
+                  </a>
                 </article>
               ))}
         </div>
@@ -58,9 +62,15 @@ function Notice() {
         <div className="Notice__container">
           {isLoading
             ? "로딩 중..."
-            : schoolNotiList.map((item) => (
-                <article className={`article__${isNewItem(item)}`}>
-                  {item.content}
+            : schoolNotiList.map((item, idx) => (
+                <article key={idx} className={`article__${isNewItem(item)}`}>
+                  <a
+                    href={
+                      "http://www.kau.ac.kr/page/kauspace/academicinfo_list.jsp"
+                    }
+                  >
+                    {item.content}
+                  </a>
                 </article>
               ))}
         </div>
