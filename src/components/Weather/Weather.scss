@@ -27,14 +27,26 @@
 }
 
 .Weather__icon {
-  background-color: #fefefe;
+  background-color: #b9d2eb;
   border-radius: 8px;
   margin: 10px;
-  opacity: 0.8;
+  opacity: 1;
   text-align: center;
   width: 60px;
   height: 60px;
   grid-area: icon;
+  box-shadow: 0 4px #666;
+  cursor: pointer;
+}
+
+.Weather__icon:hover {
+  transition: 100ms ease-in;
+  background-color: #a4c0dd;
+}
+
+.Weather__icon:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(3px);
 }
 
 .Weather__styleLine {
@@ -68,4 +80,28 @@
 .Weather__content {
   display: flex;
   align-items: center;
+}
+
+.Weather__weekly__visible {
+  color: black;
+  display: flex;
+  box-sizing: border-box;
+  border: 7px solid #a4c0dd;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  margin-left: 20%;
+  width: 10%;
+  border-radius: 8px;
+}
+
+.Weather__weekly__invisible {
+  display: none;
+}
+
+.Weather__weekly__content {
+  font-size: 0.7rem;
 }
