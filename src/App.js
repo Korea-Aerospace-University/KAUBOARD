@@ -8,9 +8,8 @@ import { useEffect, useState } from "react";
 function App() {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
   useEffect(() => {
-      setBackgroundIndex(Math.floor((Math.random() * 100) % 16) + 1);
+    setBackgroundIndex(Math.floor((Math.random() * 100) % 16) + 1);
   }, []);
-  console.log(backgroundIndex);
   const styles = {
     background: {
       backgroundImage: `url(./background${backgroundIndex}.jpg)`,
