@@ -1,0 +1,88 @@
+.Suggestion {
+  background-color: white;
+  position: absolute;
+  right: 20px;
+  font-weight: 300;
+  bottom: 20px;
+  padding: 0.8rem 0.8rem;
+  border-radius: 8px;
+  border: 4px solid #3f3f3f;
+}
+
+.Suggestion__icon {
+  opacity: 0.8;
+  border: 4px solid #3f3f3f;
+  background-color: white;
+  position: absolute;
+  padding: 1rem;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.Suggestion__button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.Suggestion__form__visible {
+  margin-top: 0.8rem;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  label {
+    font-size: 0.8rem;
+  }
+  animation: open 0.2s ease-out;
+}
+
+.Suggestion__form__invisible {
+  display: none;
+  animation: close 0.2s ease-in;
+}
+
+#Suggestion__email {
+  margin: 0.5rem 0;
+  line-height: 1.5rem;
+}
+#Suggestion__email::-webkit-input-placeholder {
+  padding: 5px;
+}
+
+#Suggestion__description {
+  margin: 0.5rem 0;
+  line-height: 1.5rem;
+  resize: none;
+}
+
+#Suggestion__description::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+
+@keyframes open {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    width: 250px;
+    height: 250px;
+  }
+}
