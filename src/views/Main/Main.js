@@ -11,7 +11,7 @@ function Main() {
       <div className="Main__container">
         <article className="Main__container__upper">
           <section className="Main__dday">
-            <CountDown date={`${2020}-12-24T00:00:00`}></CountDown>
+            <CountDown></CountDown>
           </section>
           <section className="Main__weather">
             <Weather />
