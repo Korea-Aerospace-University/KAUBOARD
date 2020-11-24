@@ -75,7 +75,6 @@ function Weather() {
   }, []);
 
   const onIconFocus = () => {
-    console.log(visible);
     setVisible(!visible);
   };
 
