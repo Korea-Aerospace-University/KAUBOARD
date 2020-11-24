@@ -11,14 +11,21 @@
 
 .Suggestion__icon {
   opacity: 0.8;
+  width: 30px;
   border: 4px solid #3f3f3f;
   background-color: white;
   position: absolute;
-  padding: 1rem;
-  border-radius: 50%;
+  padding: 0.8rem;
+  border-radius: 25%;
   right: 20px;
   bottom: 20px;
   cursor: pointer;
+}
+
+.Suggestion__icon:hover {
+  transition: 200ms ease-in;
+  background-color: #a0cada;
+  animation: tremble 1s infinite;
 }
 
 .Suggestion__button {
@@ -84,5 +91,26 @@ button:focus {
   to {
     width: 250px;
     height: 250px;
+  }
+}
+
+@keyframes tremble {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(-13deg);
+  }
+  40% {
+    transform: rotateZ(13deg);
+  }
+  60% {
+    transform: rotateZ(-13deg);
+  }
+  80% {
+    transform: rotateZ(13deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }
