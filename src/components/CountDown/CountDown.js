@@ -1,31 +1,54 @@
-import React, { PropTypes, Component } from "react";
+/*global chrome */
+import React, { useEffect, useState } from "react";
 import "./CountDown.scss";
 
-class Countdown extends Component {
-  constructor(props) {
-    super(props);
+let interval = 0;
+function CountDown() {
+  const [state, setstate] = useState({
+    days: 0,
+    hours: 0,
+    min: 0,
+    sec: 0,
+  });
+  const [targetDate, setTargetDate] = useState(null);
+  const [targetType, setTargetType] = useState(null);
+  const [isSetterVisible, setIsSetterVisible] = useState(false);
 
-    this.state = {
-      days: 0,
-      hours: 0,
-      min: 0,
-      sec: 0,
+  useEffect(() => {
+    chrome.storage.sync.get(["targetDate", "targetType"], function (result) {
+      console.log("GET : ", result.targetDate, result.targetType);
+      setTargetDate(result.targetDate);
+      setTargetType(result.targetType);
+      interval = setInterval(() => {
+        const date = calculateCountdown(result.targetDate);
+        date ? setstate(date) : stop();
+      }, 1000);
+    });
+    return () => {
+      stop();
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    // update every second
-    this.interval = setInterval(() => {
-      const date = this.calculateCountdown(this.props.date);
-      date ? this.setState(date) : this.stop();
-    }, 1000);
-  }
+  const onTargetDateChange = (e) => {
+    setTargetDate(e.target.value);
+  };
+  const onTargetTypeChange = (e) => {
+    setTargetType(e.target.value);
+  };
+  // 디데이 설정 버튼 누르면, 크롬 저장소에 저장하도록
+  const onTargetDataSubmit = () => {
+    chrome.storage.sync.set({ targetDate: targetDate, targetType: targetType });
+    setIsSetterVisible(false);
+  };
+  const setSetterVisible = () => {
+    setIsSetterVisible(true);
+  };
+  const hideSetterVisible = () => {
+    setIsSetterVisible(false);
+  };
 
-  componentWillUnmount() {
-    this.stop();
-  }
-
-  calculateCountdown(endDate) {
+  // 카운트다운 로직 시작
+  function calculateCountdown(endDate) {
     let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
 
     // clear countdown when date is reached
@@ -65,60 +88,113 @@ class Countdown extends Component {
     return timeLeft;
   }
 
-  stop() {
-    clearInterval(this.interval);
+  function stop() {
+    clearInterval(interval);
   }
 
-  addLeadingZeros(value) {
+  function addLeadingZeros(value) {
     value = String(value);
     while (value.length < 2) {
       value = "0" + value;
     }
     return value;
   }
+  const countDown = state;
 
-  render() {
-    const countDown = this.state;
-
-    return (
-      <div className="Countdown">
-        <div className="Countdown__title">종강까지 남은 시간 ⏱</div>
-        <div className="Countdown-timer">
-          <strong style={{ fontSize: "3rem" }}>[</strong>
-          <span className="Countdown-col">
-            <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.days)}</strong>
-              <span>{"Days"}</span>
-            </span>
+  return (
+    <div className="Countdown">
+      {targetType ? (
+        <div className="Countdown__title" onClick={setSetterVisible}>
+          {targetType}까지 남은 시간 ⏱
+        </div>
+      ) : (
+        <div className="Countdown__title" onClick={setSetterVisible}>
+          📅 날짜를 설정해주세요
+        </div>
+      )}
+      {/* 디데이 직접 설정할 수 있는 세터 부분 */}
+      <div
+        className="Countdown__setter"
+        style={{ visibility: isSetterVisible ? "visible" : "hidden" }}
+      >
+        <input type="date" onChange={onTargetDateChange}></input>
+        <div className="Countdown__setter__radio" onChange={onTargetTypeChange}>
+          <span>
+            <input
+              type="radio"
+              id="opening"
+              name="event"
+              value="개강"
+              onChange={onTargetTypeChange}
+            ></input>
+            <label htmlFor="opening">개강</label>
           </span>
-          <span style={{ fontSize: "3rem" }}>/</span>
-          <span className="Countdown-col">
-            <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-              <span>{"Hour"}</span>
-            </span>
+          <span>
+            <input
+              type="radio"
+              id="ending"
+              name="event"
+              value="종강"
+              onChange={onTargetTypeChange}
+            ></input>
+            <label htmlFor="ending">종강</label>
           </span>
-          <span style={{ fontSize: "3rem" }}>:</span>
-
-          <span className="Countdown-col">
-            <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.min)}</strong>
-              <span>{"Minute"}</span>
-            </span>
-          </span>
-
-          <span style={{ fontSize: "3rem" }}>:</span>
-          <span className="Countdown-col">
-            <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-              <span>{"Second"}</span>
-            </span>
-          </span>
-          <strong style={{ fontSize: "3rem" }}>]</strong>
+        </div>
+        <div
+          style={{ color: "#cf3d3d", fontSize: "0.6rem", margin: "0.5rem 0" }}
+        >
+          * 새로고침 후 변경 결과가 반영됩니다!
+        </div>
+        <div className="Countdown__setter__btn__container">
+          <button
+            className="Countdown__setter__cancel"
+            onClick={hideSetterVisible}
+          >
+            취소
+          </button>
+          <button
+            className="Countdown__setter__save"
+            onClick={onTargetDataSubmit}
+          >
+            설정
+          </button>
         </div>
       </div>
-    );
-  }
+      <div className="Countdown-timer">
+        <strong style={{ fontSize: "3rem" }}>[</strong>
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong>{addLeadingZeros(countDown.days)}</strong>
+            <span>{"Days"}</span>
+          </span>
+        </span>
+        <span style={{ fontSize: "3rem" }}>/</span>
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong>{addLeadingZeros(countDown.hours)}</strong>
+            <span>{"Hour"}</span>
+          </span>
+        </span>
+        <span style={{ fontSize: "3rem" }}>:</span>
+
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong>{addLeadingZeros(countDown.min)}</strong>
+            <span>{"Minute"}</span>
+          </span>
+        </span>
+
+        <span style={{ fontSize: "3rem" }}>:</span>
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+            <strong>{addLeadingZeros(countDown.sec)}</strong>
+            <span>{"Second"}</span>
+          </span>
+        </span>
+        <strong style={{ fontSize: "3rem" }}>]</strong>
+      </div>
+    </div>
+  );
 }
 
-export default Countdown;
+export default CountDown;

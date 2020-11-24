@@ -11,11 +11,60 @@
 
 .Countdown__title {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   margin: 1rem;
   margin-top: 0;
   text-align: center;
   animation: flutter 1s infinite;
+  cursor: pointer;
+}
+
+.Countdown__setter {
+  position: absolute;
+  padding: 1rem;
+  border: 4px solid #383838;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  button {
+    width: 45%;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    border: 0px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+  .Countdown__setter__btn__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  button:hover {
+    transition: 100ms ease-in;
+    filter: brightness(90%);
+  }
+}
+.Countdown__setter__save {
+  background-color: #43d37a;
+}
+.Countdown__setter__cancel {
+  background-color: #d34343;
+}
+.Countdown__setter__radio {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  input[type="radio"] {
+    cursor: pointer;
+  }
+  label {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    margin-left: 5px;
+  }
 }
 
 .Countdown-col {
