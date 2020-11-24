@@ -124,10 +124,10 @@ function Weather() {
           visible ? `Weather__weekly__visible` : `Weather__weekly__invisible`
         }
       >
-        <span style={{ fontSize: "1.1rem" }}>주간 예보</span>
+        <span style={{ fontSize: "1.1rem", fontWeight: "600" }}>주간 예보</span>
         {weeklyTemp.map((el, idx) => (
           <>
-            <img src={weeklyIcon[idx]} width="60"></img>
+            <img src={weeklyIcon[idx]} alt="icon" width="60"></img>
             <div className="Weather__weekly__content">{`${
               weekData[idx].month
             }/${weekData[idx].date} (${weekData[idx].day}) ${parseFloat(
