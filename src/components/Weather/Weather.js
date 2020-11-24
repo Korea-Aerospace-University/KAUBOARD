@@ -19,6 +19,8 @@ const setDay = (day) => {
       return "금";
     case 6:
       return "토";
+    default:
+      return;
   }
 };
 
@@ -83,7 +85,7 @@ function Weather() {
       <div className="Weather__styleLine"></div>
       <section className="Weather__icon" onClick={onIconFocus}>
         {isLoading ? (
-          <img src="./loading.svg" />
+          <img src="./loading.svg" alt="로딩 중..." />
         ) : (
           <img src={currentIcon} alt="weather" width="60"></img>
         )}
@@ -126,14 +128,14 @@ function Weather() {
       >
         <span style={{ fontSize: "1.1rem", fontWeight: "600" }}>주간 예보</span>
         {weeklyTemp.map((el, idx) => (
-          <>
+          <React.Fragment key={idx}>
             <img src={weeklyIcon[idx]} alt="icon" width="60"></img>
             <div className="Weather__weekly__content">{`${
               weekData[idx].month
             }/${weekData[idx].date} (${weekData[idx].day}) ${parseFloat(
               el
             ).toFixed(1)}°C`}</div>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

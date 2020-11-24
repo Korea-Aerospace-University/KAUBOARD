@@ -12,7 +12,6 @@ function Quotes() {
   }, []);
   const [quote, setQuote] = useState({ todayQuote: "", todaySpeaker: "" });
   const [isLoading, setIsLoading] = useState(true);
-  console.log(quote);
 
   return (
     <div className="Quotes">
