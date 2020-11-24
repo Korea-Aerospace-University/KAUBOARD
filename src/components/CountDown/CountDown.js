@@ -16,11 +16,14 @@ function CountDown() {
 
   useEffect(() => {
     chrome.storage.sync.get(["targetDate", "targetType"], function (result) {
-      console.log("GET : ", result.targetDate, result.targetType);
+      let storageDate = result.targetDate;
       setTargetDate(result.targetDate);
       setTargetType(result.targetType);
       interval = setInterval(() => {
-        const date = calculateCountdown(result.targetDate);
+        if (storageDate === undefined) {
+          storageDate = null;
+        }
+        const date = calculateCountdown(storageDate);
         date ? setstate(date) : stop();
       }, 1000);
     });
