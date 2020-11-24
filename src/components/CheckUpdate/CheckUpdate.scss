@@ -1,14 +1,21 @@
 .CheckUpdate__icon {
   opacity: 0.8;
+  width: 30px;
   background-color: white;
   position: absolute;
-  right: 130px;
+  right: 100px;
   text-align: center;
   bottom: 20px;
-  padding: 1rem;
+  padding: 0.8rem;
   border: 4px solid #3f3f3f;
-  border-radius: 50%;
+  border-radius: 25%;
   cursor: pointer;
+}
+
+.CheckUpdate__icon:hover {
+  transition: 200ms ease-in;
+  background-color: #a0cada;
+  animation: tremble 1s infinite;
 }
 
 .CheckUpdate__status {
@@ -19,7 +26,7 @@
   border: 4px solid #3f3f3f;
   padding: 0.75rem;
   font-weight: 300;
-  right: 130px;
+  right: 100px;
   bottom: 20px;
   border-radius: 8px;
 }

@@ -41,7 +41,6 @@ function CheckUpdate() {
           className="CheckUpdate__icon"
           src="update.png"
           alt="업데이트 확인"
-          style={{ backgroundColor: "white" }}
         ></img>
       )}
     </div>
