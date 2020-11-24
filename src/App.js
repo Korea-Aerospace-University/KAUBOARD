@@ -12,7 +12,7 @@ function App() {
   }, []);
   const styles = {
     background: {
-      backgroundImage: `url(./background${backgroundIndex}.jpg)`,
+      backgroundImage: `url(./background/background${backgroundIndex}.jpg)`,
       //backgroundPosition: "0 20",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
