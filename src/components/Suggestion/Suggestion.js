@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./Suggestion.scss";
 
+const APIkey1 = "T01EMT1K733";
+const APIkey2 = "B01FKS7MQR2";
+const APIkey3 = "vrRy3kMlIN1Xof0nU3QiUffX";
+
 function Suggestion() {
   const [formVisible, setFormVisible] = useState(false);
   const [submitButtonStyle, setSubmitButtonStyle] = useState({
@@ -17,28 +21,25 @@ function Suggestion() {
   };
 
   const onSuggestionSubmit = (e) => {
-    fetch(
-      "https://hooks.slack.com/services/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",
-      {
-        method: "POST",
-        mode: "cors",
-        body: JSON.stringify({
-          attachments: [
-            {
-              pretext: `${data.email} 님으로부터 새로운 건의사항 도착`,
-              color: "#40368a",
-              fields: [
-                {
-                  title: `${data.email}`,
-                  value: `${data.description}`,
-                  short: true,
-                },
-              ],
-            },
-          ],
-        }),
-      }
-    );
+    fetch(`https://hooks.slack.com/services/${APIkey1}/${APIkey2}/${APIkey3}`, {
+      method: "POST",
+      mode: "cors",
+      body: JSON.stringify({
+        attachments: [
+          {
+            pretext: `${data.email} 님으로부터 새로운 건의사항 도착`,
+            color: "#40368a",
+            fields: [
+              {
+                title: `${data.email}`,
+                value: `${data.description}`,
+                short: true,
+              },
+            ],
+          },
+        ],
+      }),
+    });
     e.preventDefault();
     setData({ email: "", description: "" });
     e.target.value = "";
