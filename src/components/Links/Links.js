@@ -22,7 +22,7 @@ function Links() {
         />
         <IconLink
           title="학교 홈페이지"
-          href="https://www.kau.ac.kr/page/main.jsp"
+          href="https://www.kau.ac.kr/web/index.do"
           src="./university.svg"
           alt="학교 메인"
           width="50"
