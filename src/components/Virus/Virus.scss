@@ -1,0 +1,33 @@
+.Virus {
+  opacity: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  padding: 0 1rem;
+  height: 85%;
+  border-radius: 8px;
+  line-height: 1.5rem;
+  animation: QuotesFadeIn 1s 0.7s forwards;
+}
+.Virus__borderLine {
+  width: 80%;
+  border-bottom: 1px solid #cdcdcd;
+  margin: 0.5rem;
+}
+
+.Virus__victims {
+  font-size: 1.02rem;
+  font-weight: 400;
+  div {
+    margin: 0.5rem;
+  }
+}
+
+.Virus__diff {
+  font-size: 0.88rem;
+  margin-left: 0.5rem;
+}

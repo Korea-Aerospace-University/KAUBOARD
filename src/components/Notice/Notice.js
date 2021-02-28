@@ -42,10 +42,8 @@ function Notice() {
             ? "로딩 중..."
             : generalNotiList.map((item, idx) => (
                 <article key={idx} className={`article__${isNewItem(item)}`}>
-                  <a
-                    href={"http://www.kau.ac.kr/page/kauspace/general_list.jsp"}
-                  >
-                    {item.content}
+                  <a href={"https://www.kau.ac.kr/web/pages/gc32172b.do"}>
+                    {item}
                   </a>
                 </article>
               ))}
@@ -64,12 +62,8 @@ function Notice() {
             ? "로딩 중..."
             : schoolNotiList.map((item, idx) => (
                 <article key={idx} className={`article__${isNewItem(item)}`}>
-                  <a
-                    href={
-                      "http://www.kau.ac.kr/page/kauspace/academicinfo_list.jsp"
-                    }
-                  >
-                    {item.content}
+                  <a href={"https://www.kau.ac.kr/web/pages/gc14561b.do"}>
+                    {item}
                   </a>
                 </article>
               ))}
