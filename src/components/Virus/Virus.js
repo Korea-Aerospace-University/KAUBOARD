@@ -12,7 +12,7 @@ const Virus = () => {
   const [today, setToday] = useState(new Date().toLocaleDateString());
 
   useLayoutEffect(() => {
-    fetch("http://localhost:5000/virus")
+    fetch("https://calm-mesa-43659.herokuapp.com/virus")
       .then((res) => res.json())
       .then((data) => {
         setSeoul(data.seoul);

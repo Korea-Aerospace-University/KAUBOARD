@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CheckUpdate.scss";
 
 // 업데이트 시마다 무조건 바꿔주기!!
-const version = "1.0.0";
+const version = "1.0.1";
 
 function CheckUpdate() {
   const [versionState, setVersionState] = useState(null);
@@ -14,7 +14,7 @@ function CheckUpdate() {
       .then((res) => res.json())
       .then((data) => {
         if (data.currentVersion === version) {
-          setVersionState("현재 최신 버전입니다.");
+          setVersionState(`현재 최신 버전입니다. (v${version})`);
           setBackColor("#3b42a5");
         } else {
           setVersionState("업데이트가 필요합니다.");
