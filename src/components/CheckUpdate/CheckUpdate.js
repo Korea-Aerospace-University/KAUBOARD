@@ -24,7 +24,10 @@ function CheckUpdate() {
       });
   };
   return (
-    <div onClick={onUpdateBtnClick}>
+    <a
+      onLoad={onUpdateBtnClick}
+      href="https://chrome.google.com/webstore/detail/%EC%B9%B4%EC%9A%B0%EB%B3%B4%EB%93%9C/lffcahbpjjidhadlomcpckmljndafmao?utm_source=chrome-ntp-icon"
+    >
       {/* 버전 정보가 있으면 텍스트 출력 */}
       {versionState ? (
         <div
@@ -43,7 +46,7 @@ function CheckUpdate() {
           alt="업데이트 확인"
         ></img>
       )}
-    </div>
+    </a>
   );
 }
 
