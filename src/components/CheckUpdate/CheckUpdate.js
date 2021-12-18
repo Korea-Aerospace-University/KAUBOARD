@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CheckUpdate.scss";
 
 // 업데이트 시마다 무조건 바꿔주기!!
-const version = "1.0.1";
+const version = "1.0.2";
 
 function CheckUpdate() {
   const [versionState, setVersionState] = useState(null);
@@ -37,15 +37,15 @@ function CheckUpdate() {
           {versionState}
         </div>
       ) : // 버전 정보 없으면 아이콘 출력
-      checking ? (
-        <img className="CheckUpdate__icon" src="./checkUpdate.svg"></img>
-      ) : (
-        <img
-          className="CheckUpdate__icon"
-          src="update.png"
-          alt="업데이트 확인"
-        ></img>
-      )}
+        checking ? (
+          <img className="CheckUpdate__icon" src="./checkUpdate.svg"></img>
+        ) : (
+          <img
+            className="CheckUpdate__icon"
+            src="update.png"
+            alt="업데이트 확인"
+          ></img>
+        )}
     </a>
   );
 }
