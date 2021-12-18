@@ -20,19 +20,18 @@ const Virus = () => {
       });
   }, []);
 
+  const navigateCoronaPage = () => {
+    window.open('http://ncov.mohw.go.kr/')
+  }
+
   return (
-    <div className="Virus" onClick="window.open('http://ncov.mohw.go.kr/')">
+    <div className="Virus" onClick={navigateCoronaPage}>
       <h3>{today} 신규 확진자</h3>
       <div className="Virus__borderLine"></div>
       <div className="Virus__victims">
         <div>
           <span>서울 : </span>
-          <CountUp
-            start={0}
-            end={isNaN(Number(seoul?.newCase)) ? 0 : Number(seoul?.newCase)}
-            suffix="명"
-            duration={2.75}
-          />
+          <span>{seoul?.newCase}명</span>
           <span className="Virus__diff">
             (
             <Arrow state="down" />
@@ -41,14 +40,7 @@ const Virus = () => {
         </div>
         <div>
           <span>경기 : </span>
-          <CountUp
-            start={0}
-            end={
-              isNaN(Number(gyeonggi?.newCase)) ? 0 : Number(gyeonggi?.newCase)
-            }
-            suffix="명"
-            duration={2.75}
-          />
+          <span>{gyeonggi?.newCase}명</span>
           <span className="Virus__diff">
             (<Arrow state="up" />
             12명)
