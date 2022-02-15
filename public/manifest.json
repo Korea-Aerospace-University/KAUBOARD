@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.0.2",
+  "version": "1.0.5",
   "short_name": "KauBoard",
   "name": "카우보드",
   "description": "한국항공대 학생들을 위한 종강시계 어플리케이션",

@@ -12,7 +12,7 @@ function Main() {
       <div className="Main__container">
         <article className="Main__container__upper">
           <section className="Main__dday">
-            <CountDown></CountDown>
+            <CountDown />
           </section>
           <section className="Main__weather">
             <Weather />
@@ -20,8 +20,8 @@ function Main() {
         </article>
         <article className="Main__container__lower">
           <section className="Main__schedule">
-            {/* <Quotes></Quotes> */}
-            <Virus></Virus>
+            <Quotes />
+            {/* <Virus></Virus> */}
           </section>
           <section className="Main__notice">
             <Notice></Notice>

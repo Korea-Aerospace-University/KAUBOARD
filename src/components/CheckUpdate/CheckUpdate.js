@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CheckUpdate.scss";
 
 // 업데이트 시마다 무조건 바꿔주기!!
-const version = "1.0.2";
+const version = "1.0.5";
 
 function CheckUpdate() {
   const [versionState, setVersionState] = useState(null);
@@ -10,7 +10,7 @@ function CheckUpdate() {
   const [checking, setChecking] = useState(false);
   const onUpdateBtnClick = () => {
     setChecking(true);
-    fetch("https://calm-mesa-43659.herokuapp.com/checkVersion")
+    fetch("https://calm-mesa-436sync59.herokuapp.com/checkVersion")
       .then((res) => res.json())
       .then((data) => {
         if (data.currentVersion === version) {

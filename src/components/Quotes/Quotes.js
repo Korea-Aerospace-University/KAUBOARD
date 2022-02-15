@@ -18,7 +18,7 @@ function Quotes() {
       <div
         style={{ fontWeight: 700, marginTop: "0.5rem", fontSize: "1.05rem" }}
       >
-        오늘의 한마디
+        🔎 오늘의 한마디
       </div>
       <div className="Quotes__borderLine"></div>
       {isLoading ? (
